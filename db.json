@@ -1,0 +1,57 @@
+{
+  "productlist": [
+    {
+      "name": "mango",
+      "catogory": "fruits",
+      "date": "2023-06-08T18:30:00.000Z",
+      "fresh": "Brand New",
+      "addinfo": "tasty",
+      "price": "100rupes",
+      "comment": "tasty",
+      "id": 1
+    },
+    {
+      "name": "mango",
+      "catogory": "electronics",
+      "date": "2023-05-31T18:30:00.000Z",
+      "fresh": "Second Hand",
+      "addinfo": "tasty",
+      "price": "234",
+      "comment": "pwolly",
+      "id": 2
+    },
+    {
+      "name": "orange",
+      "catogory": "fruits",
+      "date": "2023-06-26T18:30:00.000Z",
+      "fresh": "Second Hand",
+      "addinfo": "vitamic c",
+      "price": "120",
+      "comment": "tasty",
+      "id": 3
+    },
+    {
+      "name": "fridge",
+      "catogory": "electronics",
+      "date": "2023-06-12T18:30:00.000Z",
+      "fresh": "Brand New",
+      "addinfo": "cooler",
+      "price": "120000",
+      "comment": "nice",
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

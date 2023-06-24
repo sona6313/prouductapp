@@ -1,0 +1,63 @@
+
+
+
+ 
+
+<h2 mat-dialog-title>Add Product Details</h2>
+<mat-dialog-content class="mat-typography">
+   
+   <form action="" [formGroup]="Submitform" (ngSubmit)="submit()">
+          
+   <mat-form-field appearance="fill">
+      <mat-label>product name</mat-label>
+      <input matInput placeholder="product name...." formControlName="name">      
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Choose an Catogory</mat-label>
+      <mat-select formControlName="catogory">
+        <mat-option value="fruits">fruits</mat-option>
+        <mat-option value="vegtables">vegetables</mat-option>
+        <mat-option value="electronics">Electronics</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    <mat-radio-group formControlName="fresh"
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="freshness">
+      <label id="example-radio-group-label">Product Freshness</label>
+      <mat-radio-button class="example-radio-button" *ngFor="let fresh of freshcatogoty" [value]="fresh" >
+         {{fresh}}
+       
+      </mat-radio-button>
+      <div>you choosed :{{freshness}}</div>
+    </mat-radio-group>     
+   
+    <mat-form-field>
+      <mat-label>Additional information</mat-label>
+      <input matInput placeholder="enter your matters" formControlName="addinfo" required>
+    </mat-form-field> 
+   
+   <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="enter ypur Price.." formControlName="price" required>
+   </mat-form-field> 
+
+   <mat-form-field>
+      <mat-label>Comment</mat-label>
+      <input matInput placeholder="enter ypur Comment.." formControlName="comment" required>
+   </mat-form-field> 
+</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" (click)="submit()"  cdkFocusInitial>{{editdata ? 'Update':'Save'}}</button>
+</mat-dialog-actions>
