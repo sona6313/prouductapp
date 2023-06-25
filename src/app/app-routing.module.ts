@@ -6,7 +6,7 @@ import { NavbarComponent } from './compnents/navbar/navbar.component';
 
 
 const routes: Routes = [
-  {path:'', component:FormComponent},
+  {path:'kj', component:FormComponent},
   {path:'l',component:NavbarComponent},
 
 ];
